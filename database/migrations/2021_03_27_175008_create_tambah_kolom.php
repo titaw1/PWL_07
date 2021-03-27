@@ -13,9 +13,9 @@ class CreateTambahKolom extends Migration
      */
     public function up()
     {
-        Schema::create('tambah_kolom', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('mahasiswa', function (Blueprint $table) {
+            $table->date('Tanggal_Lahir')->after('Nama')->nullable();
+            $table->string('Email', 50)->after('Jurusan')->nullable();
         });
     }
 
