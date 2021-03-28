@@ -43,8 +43,10 @@ class MahasiswaController extends Controller
         $request->validate([
             'Nim' => 'required',
             'Nama' => 'required',
+            'Tanggal_Lahir' => 'required',
             'Kelas' => 'required',
             'Jurusan' => 'required',
+            'Email' => 'required',
             'No_Handphone' => 'required',
         ]);
 
@@ -95,8 +97,10 @@ class MahasiswaController extends Controller
         $request->validate([
             'Nim' => 'required',
             'Nama' => 'required',
+            'Tanggal_Lahir' => 'required',
             'Kelas' => 'required',
             'Jurusan' => 'required',
+            'Email' => 'required',
             'No_Handphone' => 'required',
         ]);
         //fungsi eloquent untuk mengupdate data inputan kita
