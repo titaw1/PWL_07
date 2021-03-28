@@ -50,4 +50,7 @@
             </tr>
         @endforeach
     </table>
+    <div class="d-flex justify-content-center">
+        {{$mahasiswas->links()}}
+    </div>
 @endsection
