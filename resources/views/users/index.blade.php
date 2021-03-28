@@ -21,8 +21,10 @@
         <tr>
             <th>Nim</th>
             <th>Nama</th>
+            <th>Tanggal_Lahir</th>
             <th>Kelas</th>
             <th>Jurusan</th>
+            <th>Email</th>
             <th>No_Handphone</th>
             <th width="280px">Action</th>
         </tr>
@@ -31,8 +33,10 @@
 
                 <td>{{ $Mahasiswa->Nim }}</td>
                 <td>{{ $Mahasiswa->Nama }}</td>
+                <td>{{ $Mahasiswa->Tanggal_Lahir }}</td>
                 <td>{{ $Mahasiswa->Kelas }}</td>
                 <td>{{ $Mahasiswa->Jurusan }}</td>
+                <td>{{ $Mahasiswa->Email }}</td>
                 <td>{{ $Mahasiswa->No_Handphone }}</td>
                 <td>
                     <form action="{{ route('mahasiswa.destroy', $Mahasiswa->Nim) }}" method="POST">
