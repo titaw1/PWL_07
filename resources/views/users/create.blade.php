@@ -33,6 +33,10 @@
                             <input type="Nama" name="Nama" class="form-control" id="Nama" aria-describedby="Nama">
                         </div>
                         <div class="form-group">
+                            <label for="Tanggal_Lahir">Tanggal_Lahir</label>
+                            <input type="date" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" aria-describedby="Tanggal_Lahir">
+                        </div>
+                        <div class="form-group">
                             <label for="Kelas">Kelas</label>
                             <input type="Kelas" name="Kelas" class="form-control" id="Kelas" aria-describedby="password">
                         </div>
@@ -40,6 +44,10 @@
                             <label for="Jurusan">Jurusan</label>
                             <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan"
                                 aria-describedby="Jurusan">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="Email" name="Email" class="form-control" id="Email" aria-describedby="Email">
                         </div>
                         <div class="form-group">
                             <label for="No_Handphone">No_Handphone</label>
