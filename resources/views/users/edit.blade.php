@@ -39,11 +39,11 @@
                             <input type="date" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir"
                                 value="{{ $Mahasiswa->Tanggal_Lahir }}" aria-describedby="Tanggal_Lahir">
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="Kelas">Kelas</label>
                             <input type="Kelas" name="Kelas" class="form-control" id="Kelas"
                                 value="{{ $Mahasiswa->Kelas }}" aria-describedby="Kelas">
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="Jurusan">Jurusan</label>
                             <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan"
@@ -59,6 +59,11 @@
 
                             <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone"
                                 value="{{ $Mahasiswa->No_Handphone }}" aria-describedby="No_Handphone">
+                        </div>
+                        <div class="form-group">
+                            <label for="Kelas">Kelas</label>
+                            <input type="Kelas" name="Kelas" class="form-control" id="Kelas"
+                                value="{{ $Mahasiswa->kelas_id }}" aria-describedby="Kelas">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

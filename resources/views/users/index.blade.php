@@ -36,19 +36,18 @@
             <th>Nim</th>
             <th>Nama</th>
             <th>Tanggal_Lahir</th>
-            <th>Kelas</th>
             <th>Jurusan</th>
             <th>Email</th>
             <th>No_Handphone</th>
             <th width="280px">Action</th>
+            <th>Kelas</th>
         </tr>
         @foreach ($mahasiswas as $Mahasiswa)
             <tr>
 
                 <td>{{ $Mahasiswa->Nim }}</td>
                 <td>{{ $Mahasiswa->Nama }}</td>
-                <td>{{ $Mahasiswa->Tanggal_Lahir }}</td>
-                <td>{{ $Mahasiswa->Kelas }}</td>
+                <th>{{ $Mahasiswa->Tanggal_Lahir }}</th>
                 <td>{{ $Mahasiswa->Jurusan }}</td>
                 <td>{{ $Mahasiswa->Email }}</td>
                 <td>{{ $Mahasiswa->No_Handphone }}</td>
@@ -61,6 +60,7 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
+                <th>{{ $Mahasiswa->kelas->nama_kelas}}</th>
             </tr>
         @endforeach
     </table>
