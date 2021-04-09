@@ -49,14 +49,25 @@ class MahasiswaController extends Controller
             'Nim' => 'required',
             'Nama' => 'required',
             'Tanggal_Lahir' => 'required',
-            'Kelas' => 'required',
+            'kelas' => 'required',
             'Jurusan' => 'required',
             'Email' => 'required',
             'No_Handphone' => 'required',
         ]);
 
-        //fungsi eloquent untuk menambah data
-        Mahasiswa::create($request->all());
+        $kelas = Kelas::find($request->get('kelas'));
+
+        $Mahasiswa = new Mahasiswa;
+        $Mahasiswa->Nim = $request->get('Nim');
+        $Mahasiswa->Nama = $request->get('Nama');
+        $Mahasiswa->Tanggal_Lahir = $request->get('Tanggal_Lahir');
+        $Mahasiswa->Jurusan = $request->get('Jurusan');
+        $Mahasiswa->Email = $request->get('Email');
+        $Mahasiswa->No_Handphone = $request->get('No_Handphone');
+
+        //fungsi eloquent untuk menambah data dengan relasi belongsTo
+        $Mahasiswa->kelas()->associate($kelas);
+        $Mahasiswa->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
         return redirect()->route('mahasiswa.index')
@@ -72,7 +83,8 @@ class MahasiswaController extends Controller
     public function show($Nim)
     {
         //menampilkan detail data dengan menemukan/berdasarkan Nim Mahasiswa
-        $Mahasiswa = Mahasiswa::find($Nim);
+        // $Mahasiswa = Mahasiswa::find($Nim);
+
         return view('users.detail', compact('Mahasiswa'));
     }
 
