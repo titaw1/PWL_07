@@ -10,8 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Mahasiswa extends Model
 {
-    protected $table="mahasiswa"; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswas
-    public $timestamps= false;
+    protected $table='mahasiswa'; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswas
     protected $primaryKey = 'nim'; // Memanggil isi DB Dengan primarykey
     /**
      * The attributes that are mass assignable. *
@@ -21,6 +20,7 @@ class Mahasiswa extends Model
         'Nim',
         'Nama',
         'Tanggal_Lahir',
+        'kelas_id',
         'Jurusan',
         'Email',
         'No_Handphone',
