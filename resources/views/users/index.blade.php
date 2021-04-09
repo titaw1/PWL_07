@@ -47,7 +47,7 @@
 
                 <td>{{ $Mahasiswa->Nim }}</td>
                 <td>{{ $Mahasiswa->Nama }}</td>
-                <th>{{ $Mahasiswa->Tanggal_Lahir }}</th>
+                <td>{{ $Mahasiswa->Tanggal_Lahir }}</td>
                 <td>{{ $Mahasiswa->Jurusan }}</td>
                 <td>{{ $Mahasiswa->Email }}</td>
                 <td>{{ $Mahasiswa->No_Handphone }}</td>
@@ -60,7 +60,7 @@
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
                 </td>
-                <th>{{ $Mahasiswa->kelas->nama_kelas}}</th>
+                <td>{{ $Mahasiswa->kelas->nama_kelas}}</td>
             </tr>
         @endforeach
     </table>
